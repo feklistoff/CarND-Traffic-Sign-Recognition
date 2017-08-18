@@ -3,8 +3,7 @@
 
 Overview
 ---
-In this project I use deep neural networks and convolutional neural networks to classify traffic signs. 
-
+In this project I use deep neural networks and convolutional neural networks to classify traffic signs.
 Let's train and validate a model so it can classify traffic sign images using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset).
 
 Detailed [writeup of the project](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup_template.md).
