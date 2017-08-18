@@ -6,7 +6,7 @@ Overview
 In this project I use deep neural networks and convolutional neural networks to classify traffic signs.
 Let's train and validate a model so it can classify traffic sign images using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset).
 
-Detailed [writeup of the project](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup_template.md).
+Detailed [writeup of the project](https://github.com/feklistoff/udacity-carnd-project2/blob/master/Writeup_Project_2.md).
 
 The Project
 ---
@@ -39,7 +39,7 @@ The lab environment can be created with CarND Term1 Starter Kit. Click [here](ht
 1. Download the data set. This is a pickled dataset in which the images already resized to 32x32. It contains a training, validation and test set.
 2. Clone the project.
 ```sh
-git clone https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project
+git clone https://github.com/feklistoff/udacity-carnd-project2
 cd CarND-Traffic-Sign-Classifier-Project
 jupyter notebook Traffic_Sign_Classifier.ipynb
 ```
