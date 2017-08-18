@@ -1,6 +1,5 @@
 # **Traffic Sign Recognition**
 
----
 **Build a Traffic Sign Recognition Project. Deep Learning and Convolutional Neural Networks**
 
 The goals / steps of this project are the following:
@@ -9,8 +8,6 @@ The goals / steps of this project are the following:
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
-
----
 
 
 ## Writeup 
@@ -151,8 +148,8 @@ Input 2x2x256. Output 1024.
 * **Dropout** 0.40
 
 **Layer 6: Fully Connected (Logits).** Input 256. Output 43.
-       
-**Output: ** Return the result of the 3rd fully connected layer.
+
+**Output:** Return the result of the 3rd fully connected layer.
 
 ---
 
@@ -187,14 +184,11 @@ Training parameters:
 
 ### 4. The approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. 
 
----
 Final model results were:
 
 * training set accuracy of `99.8%`
 * validation set accuracy of `97.7%` 
 * test set accuracy of `97.0%`
-
----
 
 
 **The steps:**
@@ -209,7 +203,7 @@ Final model results were:
 
 
 * Further upgrade ended with validation/test accuracy of `96.8%/96.5%`.
- 5 Layers; CONV[5x5x32] -> CONV[3x3x64] -> FC[2304x512] -> FC[512x256] -> FC[256x43]. Improvements:
+5 Layers; CONV[5x5x32] -> CONV[3x3x64] -> FC[2304x512] -> FC[512x256] -> FC[256x43]. Improvements:
     * different sizes of filters
     * different probabilities for dropout on different layers
     * learning rate annealing every 5 epochs
@@ -244,18 +238,18 @@ By looking at the data distribution ("Exploratory visualization" section above),
 ### 2. Model's predictions on new traffic signs.
 
 
-| Image			                        |     Prediction	        					| 
-|:--------------------------------------|----------------------------------------------:| 
-| Priority road   		                | Priority road									| 
-| Go straight or right                  | Go straight or right							|
-| Bumpy road			                | Bumpy road									|
-| Right-of-way at the next intersection	| Right-of-way at the next intersection	        |
-| Yield			                        | Ahead only   							        |
-| Stop   		                        | Stop									        | 
-| Road work     			            | Road work										|
-| Pedestrians				            | Turn left ahead								|
-| Speed limit (30km/h)	      		    | Speed limit (30km/h)	 				        |
-| Roundabout mandatory			        | Roundabout mandatory     						|
+| Image			            |     Prediction	        		| 
+|:--------------------------------------|:------------------------------------------| 
+| Priority road   		            | Priority road					| 
+| Go straight or right                  | Go straight or right				|
+| Bumpy road			            | Bumpy road					|
+| Right-of-way at the next intersection | Right-of-way at the next intersection	|
+| Yield			            | Ahead only   					|
+| Stop   		                   | Stop						| 
+| Road work     			     | Road work					|
+| Pedestrians				     | Turn left ahead				|
+| Speed limit (30km/h)	      	     | Speed limit (30km/h)	 			|
+| Roundabout mandatory		     | Roundabout mandatory     			|
 
 
 The model was able to correctly guess 8 of the 10 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 97%. Note, that one of the most frequent sings in the training set (thus most likely to be predicted correctly) 'Yield' was predicted wrong and, conversely, two of the less frequent sings 'Bumpy road' and 'Go straight or right' were predicted correctly.
@@ -265,34 +259,35 @@ The model was able to correctly guess 8 of the 10 traffic signs, which gives an 
 
 <p align="left">
 
-<img src="writeup_imgs/predictions11.png" width="589px">
+<img src="writeup_imgs/predictions1.png" width="589px">
 
-<img src="writeup_imgs/predictions22.png" width="634px">
+<img src="writeup_imgs/predictions2.png" width="634px">
 
-<img src="writeup_imgs/predictions33.png" width="597px">
+<img src="writeup_imgs/predictions3.png" width="597px">
 
-<img src="writeup_imgs/predictions44.png" width="750px">
+<img src="writeup_imgs/predictions4.png" width="750px">
 
-<img src="writeup_imgs/predictions55.png" width="708px">
+<img src="writeup_imgs/predictions5.png" width="708px">
 
-<img src="writeup_imgs/predictions66.png" width="539px">
+<img src="writeup_imgs/predictions6.png" width="539px">
 
-<img src="writeup_imgs/predictions77.png" width="577px">
+<img src="writeup_imgs/predictions7.png" width="577px">
 
-<img src="writeup_imgs/predictions88.png" width="614px">
+<img src="writeup_imgs/predictions8.png" width="614px">
 
-<img src="writeup_imgs/predictions99.png" width="647px">
+<img src="writeup_imgs/predictions9.png" width="647px">
 
-<img src="writeup_imgs/predictions101.png" width="664px">
+<img src="writeup_imgs/predictions10.png" width="664px">
 
 </p>
-
 
 
 ## Visualizing the Neural Network
 
 
-### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+### 1. The visual output of our trained network's feature maps.
+
+For an example of what feature map outputs look like, check out NVIDIA's results in their paper End-to-End Deep Learning for Self-Driving Cars in the section [Visualization of internal CNN State](https://devblogs.nvidia.com/parallelforall/deep-learning-self-driving-cars/#attachment_7044). NVIDIA was able to show that their network's inner weights had high activations to road boundary lines by comparing feature maps from an image with a clear path to one without.
 
 
 <img src="writeup_imgs/feature_maps_conv1.png" width="850px">
