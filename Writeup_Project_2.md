@@ -67,7 +67,7 @@ We can see that data is not uniformly distributed. In order to show that in numb
 |   1860   |              Keep right                 |
 
 
-This will certainly impact our model ([more on this here](http://www.chioka.in/class-imbalance-problem/)). 
+This will certainly impact our model ([more on this here](http://www.chioka.in/class-imbalance-problem/)). However, we won't augment our data and see how the network will manage.
 
 Ok, now let's plot data distribution across all data sets (training, validation and test):
 
