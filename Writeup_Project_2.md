@@ -156,6 +156,8 @@ Input 2x2x256. Output 1024.
 
 ### 3. How the model was trained. 
 
+Model was trained on a local machine with NVIDIA GeForce GTX 750 Ti graphics card on board.
+
 Model was trained using Adam optimizer and learning rate step decay technique as described in 
 <a href="http://cs231n.github.io/neural-networks-3/#anneal">CS231n lecture</a>:
 
