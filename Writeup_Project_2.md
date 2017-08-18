@@ -1,7 +1,6 @@
-# **Traffic Sign Recognition**# 
+# **Traffic Sign Recognition**
 
 ---
-
 **Build a Traffic Sign Recognition Project. Deep Learning and Convolutional Neural Networks**
 
 The goals / steps of this project are the following:
@@ -16,7 +15,7 @@ The goals / steps of this project are the following:
 
 ## Writeup 
 
-Here is a link to the [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+Here is a link to the [project code](https://github.com/feklistoff/udacity-carnd-project2/blob/master/Traffic_Sign_Classifier%20.ipynb)
 
 
 ## Data Set Summary & Exploration
@@ -53,7 +52,7 @@ We can see that data is not uniformly distributed. In order to show that in numb
 *Five min elements:*
 
 |  Counts |                  Labels                  |  
-|---------|------------------------------------------|  
+|:-------:|------------------------------------------|  
 |   180   |         Speed limit (20km/h)             |  
 |   180   |         Go straight or left              |  
 |   180   |     Dangerous curve to the left          |  
@@ -63,7 +62,7 @@ We can see that data is not uniformly distributed. In order to show that in numb
 *Five max elements:*
 
 |  Counts  |                Labels                   |
-|----------|-----------------------------------------|
+|:--------:|-----------------------------------------|
 |   2010   |        Speed limit (50km/h)             |
 |   1980   |        Speed limit (30km/h)             |
 |   1920   |                Yield                    |
@@ -76,7 +75,7 @@ This will certainly impact our model ([more on this here](http://www.chioka.in/c
 Ok, now let's plot data distribution across all data sets (training, validation and test):
 
 
-<img src="writeup_imgs/datasets_correlation.png" width="800px">
+<img src="writeup_imgs/datasets_correlation.png" width="850px">
 
 
 Good! We can see correlation between data sets.
@@ -95,7 +94,7 @@ The thing to notice here is the "multiplied by a learning rate".
 If we didn't scale our input training vectors, the ranges of our distributions of feature values would likely be different for each feature, and thus the learning rate would cause corrections in each dimension that would differ (proportionally speaking) from one another. We might be over compensating a correction in one weight dimension while undercompensating in another.
 This is non-ideal as we might find ourselves in a oscillating (unable to center onto a better maxima in cost(weights) space) state or in a slow moving (traveling too slow to get to a better maxima) state.
 
-[Also, CS231n's great lecture with section about data pre-processing](http://cs231n.github.io/neural-networks-2/)
+Also, CS231n's [great lecture](http://cs231n.github.io/neural-networks-2/) with section about data preprocessing
 
 ```python
 # Preprocess data: feature scaling and zero-centering 
@@ -117,56 +116,42 @@ What it looks like after the preprocess stage:
 ---
 **Layer 1: Convolutional.** Input 32x32x3. Filter 5x5x64. Output 28x28x64.
 
-- **Batch Normalization**
-
-- **Activation.** ReLU.
-
-- **Pooling.** Filter 2x2. Stride 2. Output 14x14x16.
-
-- **Dropout** 0.65
+* **Batch Normalization**
+* **Activation.** ReLU.
+* **Pooling.** Filter 2x2. Stride 2. Output 14x14x16.
+* **Dropout** 0.65
 
 **Layer 2: Convolutional.** Input 14x14x64. Filter 3x3x128. Output 12x12x128.
 
-- **Batch Normalization**
-
-- **Activation.** ReLU.
-
-- **Pooling.** Filter 2x2. Stride 2. Output 6x6x128.
-
-- **Dropout** 0.50
+* **Batch Normalization**
+* **Activation.** ReLU.
+* **Pooling.** Filter 2x2. Stride 2. Output 6x6x128.
+* **Dropout** 0.50
 
 **Layer 3: Convolutional.** Input 6x6x128. Filter 3x3x256. Output 4x4x256.
 
-- **Batch Normalization**
-
-- **Activation.** ReLU.
-
-- **Pooling.** Filter 2x2. Stride 2. Output 2x2x256.
-
-- **Dropout** 0.50
+* **Batch Normalization**
+* **Activation.** ReLU.
+* **Pooling.** Filter 2x2. Stride 2. Output 2x2x256.
+* **Dropout** 0.50
 
 **Flatten.** Flatten the output shape of the last convolutional layer such that it's 1D instead of 3D. 
 Input 2x2x256. Output 1024.
 
 **Layer 4: Fully Connected.** Input 1024. Output 512.
 
-- **Batch Normalization**
-
-- **Activation.** ReLU.
-
-- **Dropout** 0.40
+* **Batch Normalization**
+* **Activation.** ReLU.
+* **Dropout** 0.40
 
 **Layer 5: Fully Connected.** Input 512. Output 512.
 
-- **Batch Normalization**
-
-- **Activation.** ReLU.
-
-- **Dropout** 0.40
+* **Batch Normalization**
+* **Activation.** ReLU.
+* **Dropout** 0.40
 
 **Layer 6: Fully Connected (Logits).** Input 256. Output 43.
-     
-    
+       
 **Output: ** Return the result of the 3rd fully connected layer.
 
 ---
