@@ -28,6 +28,7 @@ or Python 3.5 and the following libraries installed:
 * [NumPy](http://www.numpy.org/)
 * [Pandas](http://pandas.pydata.org/)
 * [scikit-learn](http://scikit-learn.org/)
+* [Open CV](http://opencv.org/)
 * [TensorFlow](http://tensorflow.org)
 
 Additionally, if you'd like to use **`tensorflow-gpu`** on a local machine [this](https://medium.com/@ikekramer/installing-cuda-8-0-and-cudnn-5-1-on-ubuntu-16-04-6b9f284f6e77) article might be a great help.
